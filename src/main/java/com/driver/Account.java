@@ -9,6 +9,7 @@ public class Account {
     }
 
     public void sendMoney(Account receiver, int amount) {
+        this.balance-=amount;
         receiver.receiveMoney(amount);
     	// your code goes here
     }
