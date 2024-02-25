@@ -9,11 +9,13 @@ public class Account {
     }
 
     public void sendMoney(Account receiver, int amount) {
+        receiver.receiveMoney(amount);
     	// your code goes here
     }
 
     public void receiveMoney(int amount) {
         synchronized (this) {
+            this.balance+=amount;
         	// your code goes here
         }
     }
